@@ -1,0 +1,130 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+.header{
+    height: 95vh; /*This will take 95% of webpage's height*/
+    background-image: linear-gradient(
+        to right bottom, /* This element will arrange color linearly from top left corner to right bottom corner*/ 
+        rgba(126, 213, 111, 0.808),
+        rgba(40, 180, 131, 0.808)), 
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; /* This element will fix top of image and crop bottom of it when we resize webpage.*/
+    clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /* clip- path element create polygon and takes input cordinates 
+    of that polygon considering left-top corner as origin, X-axis to right, Y-axis to below*/ 
+    position: relative;
+}
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo{
+    height: 35px;
+    width: auto;
+}
+/* This is the method by which we centered any block */
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    letter-spacing: 35px;
+    font-weight: 400;
+
+    animation-name: moveInleft;
+    animation-duration: 1s; /*This is the time in which animation will complete*/
+    animation-timing-function: ease-in; /* This will accelerate animation*/
+    /* 
+    animation-delay: 3s; This element start animation after 3 second opening the webpage 
+    animation-iteration-count: 3; This element repeat animation moveInleft 3 times
+    */
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    letter-spacing: 17.4px;
+    font-weight: 700;
+    animation: moveInright 1s ease-in;
+    margin-bottom: 60px;
+}
+/* Adding Animation to heading section */
+@keyframes moveInleft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    /* 60%{
+        transform: rotate(180deg); By this animation will rotate
+    } */
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInright{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* decoration of button */
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+.btn:visited{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-white{
+    color: #777;
+    background-color: #fff;
+}
