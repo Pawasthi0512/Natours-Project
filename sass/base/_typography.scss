@@ -1,0 +1,28 @@
+// This is main heading or our main header 
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    &--main{
+        display: block;
+        font-size: 6rem;
+        letter-spacing: 3.5rem;
+        font-weight: 400;
+    
+        animation-name: moveInleft;
+        animation-duration: 1s; /*This is the time in which animation will complete*/
+        animation-timing-function: ease-in; /* This will accelerate animation*/
+        /* 
+        animation-delay: 3s; This element start animation after 3 second opening the webpage 
+        animation-iteration-count: 3; This element repeat animation moveInleft 3 times
+        */
+    }
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        letter-spacing: 1.74rem;
+        font-weight: 700;
+        animation: moveInright 1s ease-in;
+        margin-bottom: 6rem;
+    }
+}

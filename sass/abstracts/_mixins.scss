@@ -1,0 +1,9 @@
+// Here we declare mixin for clearfix 
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}

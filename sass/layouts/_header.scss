@@ -1,0 +1,31 @@
+.header{
+    height: 95vh; /*This will take 95% of webpage's height*/
+    background-image: linear-gradient(
+        to right bottom, /* This element will arrange color linearly from top left corner to right bottom corner*/ 
+        rgba($primary-color-light, 0.808),
+        rgba($primary-color-dark, 0.808)), 
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; /* This element will fix top of image and crop bottom of it when we resize webpage.*/
+    clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /* clip- path element create polygon and takes input cordinates 
+    of that polygon considering left-top corner as origin, X-axis to right, Y-axis to below*/ 
+    position: relative;
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo{
+        height: 3.5rem;
+        width: auto;
+    }
+    /* This is the method by which we centered any block */
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
