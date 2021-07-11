@@ -1,0 +1,25 @@
+.feature-box{
+    background-color: rgba($color-white,.8);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .5s;
+
+    &__icon{
+        display: inline-block;
+        font-size: 6rem;
+        // margin-bottom: .5rem;
+        background-image: linear-gradient(
+        to right bottom, /* This element will arrange color linearly from top left corner to right bottom corner*/ 
+        rgba($primary-color-light, 0.808),
+        rgba($primary-color-dark, 0.808));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &:hover{
+        transform: translateY(-1rem) scale(1.05);
+    }
+    
+}
