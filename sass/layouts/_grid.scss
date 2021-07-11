@@ -1,6 +1,5 @@
 .row{
     max-width: $grid-width;
-    background-color: #bbb;
     margin: 0 auto;
     // not pseudo class select all except its argument children
     &:not(:last-child){
@@ -10,7 +9,6 @@
     @include clearfix;
     // This is selector all classes which starts(^=),contains(*=) or in end($) of class name
     [class^=col-]{
-        background-color: aqua;
         float: left;
         &:not(:last-child){
             margin-right: $gutter-horizontal; 

@@ -48,3 +48,26 @@
         }
     }
 }
+
+.btn-text {
+    &:link,
+    &:visited{
+        display: inline-block;
+        font-size: 1.6rem;
+        color: $primary-color;
+        text-decoration: none;
+        margin-bottom: 3px;
+        border-bottom: 1px solid $primary-color;
+        transition: all 0.2s;
+    }
+    &:hover{
+        background-color: $primary-color;
+        color: $color-white;
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+    &:active{
+        transform: translateY(0);
+    }
+
+}
