@@ -1,0 +1,58 @@
+.story{
+    background-color: rgba(245, 245, 245, 0.6);
+    width: 75%;
+    padding: 6rem;
+    padding-left: 9rem;
+    margin: 5rem auto;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 3rem rgba($color-black,.2);
+    transform: skewX(-15deg);
+
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        // shape-outside: ; is an element by which we can arrange text according to its border.For this we must have float, positon left etc;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(15deg);
+        position: relative;
+        backface-visibility: hidden;
+    }
+    &__img{
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+    }
+    &__text{
+
+        font-size: $default-font-size;
+        transform: skewX(15deg);
+        backface-visibility: hidden;
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        color: $color-white;
+        font-size: $default-font-size;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: all 0.8s;
+    }
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    &:hover &__img{
+        transform: translateX(-4rem) scale(1.4);
+        filter: blur(6px) brightness(85%);
+    } 
+    &__btn-text{
+        text-align: center;
+    }
+
+}
