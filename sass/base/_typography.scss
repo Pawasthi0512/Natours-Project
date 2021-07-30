@@ -1,4 +1,11 @@
 // This is main heading or our main header 
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+
+}
 .heading-primary{
     color: $color-white;
     text-transform: uppercase;
@@ -16,6 +23,13 @@
         animation-delay: 3s; This element start animation after 3 second opening the webpage 
         animation-iteration-count: 3; This element repeat animation moveInleft 3 times
         */
+        @include respond(tab-port){
+            letter-spacing: 1rem;
+        }
+        @include respond(phone){
+            font-size: 5rem;
+        }
+
     }
     &--sub{
         display: block;
@@ -24,6 +38,12 @@
         font-weight: 700;
         animation: moveInright 1s ease-in;
         margin-bottom: 6rem;
+        @include respond(tab-port){
+            letter-spacing: .5rem;
+        }
+        @include respond(phone){
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -37,6 +57,12 @@
     text-transform: uppercase;
     letter-spacing: .2rem;
     transition: all 0.2s;
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+    @include respond(tab-port){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1);

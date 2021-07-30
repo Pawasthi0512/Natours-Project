@@ -9,6 +9,9 @@
     background-position: top; /* This element will fix top of image and crop bottom of it when we resize webpage.*/
     clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /* clip- path element create polygon and takes input cordinates 
     of that polygon considering left-top corner as origin, X-axis to right, Y-axis to below*/ 
+    @include respond (phone){
+        clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
+    }
     position: relative;
     &__logo-box{
         position: absolute;

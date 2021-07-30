@@ -4,14 +4,29 @@
     // not pseudo class select all except its argument children
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+        @include respond(tab-port){
+            margin-bottom: $gutter-vertical-small;
+            margin-right: 0;
+        }
     }
 
+    @include respond(tab-port){
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
     @include clearfix;
     // This is selector all classes which starts(^=),contains(*=) or in end($) of class name
     [class^=col-]{
         float: left;
         &:not(:last-child){
             margin-right: $gutter-horizontal; 
+            @include respond(tab-port){
+                margin-bottom: $gutter-vertical-small;
+                margin-right: 0;
+            }
+        }
+        @include respond(tab-port){
+            width: 100% !important;
         }
     }
 

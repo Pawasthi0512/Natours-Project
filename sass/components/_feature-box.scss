@@ -6,6 +6,9 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     transition: transform .5s;
+    @include respond(tab-port){
+        padding: 1.5rem;
+    }
 
     &__icon{
         display: inline-block;
@@ -17,6 +20,9 @@
         rgba($primary-color-dark, 0.808));
         -webkit-background-clip: text;
         color: transparent;
+        @include respond(tab-port){
+            font-size: 4rem;
+        }
     }
     &:hover{
         transform: translateY(-1rem) scale(1.05);

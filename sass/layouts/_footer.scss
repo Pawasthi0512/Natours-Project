@@ -3,10 +3,12 @@
     padding: 10rem 0;
     font-size: 1.4rem;
     color: $color-grey-light;
+    @include respond(tab-port){padding: 8rem 0;}
 
     &__logo-box{
         text-align: center;
         margin-bottom: 8rem;
+        @include respond(tab-port){margin-bottom: 6rem;}
     }
     &__logo{
         height: 10rem;
@@ -50,6 +52,7 @@
         display: inline-block;
         width: 85%;
         float: right;
+        @include respond(tab-port){width: 100%; float: none;}
     }
     .author-name{
         font-size: 1.6rem;
