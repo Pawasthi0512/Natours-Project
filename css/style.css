@@ -98,7 +98,8 @@ body {
         letter-spacing: 1rem; } }
     @media (max-width: 37.5em) {
       .heading-primary--main {
-        font-size: 5rem; } }
+        font-size: 5rem;
+        letter-spacing: .3rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -681,7 +682,7 @@ body {
 .header {
   height: 95vh;
   /*This will take 95% of webpage's height*/
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.808), rgba(40, 180, 133, 0.808)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.808), rgba(40, 180, 133, 0.808)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   /* This element will fix top of image and crop bottom of it when we resize webpage.*/
@@ -690,6 +691,9 @@ body {
     of that polygon considering left-top corner as origin, X-axis to right, Y-axis to below*/
   position: relative;
   /* This is the method by which we centered any block */ }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.808), rgba(255, 119, 48, 0.808)), url(../img/hero.jpg); } }
   @media (max-width: 37.5em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
